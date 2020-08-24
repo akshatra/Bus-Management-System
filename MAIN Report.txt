@@ -1,0 +1,142 @@
+							*********************************************
+							**********Bus Reservation System.************
+							*********************************************
+
+************DO NOT MODIFY/DELETE THIS FILE
+
+Aim: 
+1) making bus reservation process paper free and online with less time consumption for automation in costing and booking.
+100% successful implementation of the computerized Bus reservation system.
+
+
+
+
+FLOW: 
+1)			     2)							       3)							  4) 			  5)			   6)			           7)	   				   8)
+User Enters the Web-site --> Check availability by entering source and destination --> User can select bus based on travel date and time-span -->  continue w/wo login--> take to payments page --> Pay via UPA/ Debit/ Credit --> See details of tickets booked(printable) ---> User comes back and cancels the bus with deduction in return money.
+											|
+											|    4)
+											-----> On unavailability of seat,show msg.
+
+
+
+	---> Features : 
+		|
+		|_________>Bus Ticket Reservation-- window,non-window.
+		|_________>View and download details of-- available seats, avaiblables buses, available routes along with pictures.
+		|_________>View and download details of-- reserved ticket with timing and source/destination.
+		|_________>Backup procedures and bill generation.
+		|_________>Cancel the tickets if wanted.
+
+
+
+
+	---> Functionality :
+		|
+		v________>1) Customer functionality:: Registration, Login, Bus Availability Enquiry, Make reservation, cancel reservation, print ticket, wallet payment.
+		v________>2) Admin functionality:: Update Route, Add/Update bus, select frequenty travelled routes, select last month profit, select most preferred type of bus(driver or driverless.), select who have register but not made any reservation, reservation details of customer--(daily, weekly, monthly). 
+
+
+
+
+	---> Modules :
+	       |
+	       v_________>1)Unauthorized reservation: customer is not registered and books the ticket without wallet.
+	       |				|Details input ==>(via email, phoneNo.)
+	       |				|	                             
+	       v_________>2)Authorized reservation: customer is registered and books the ticket (with or without wallet)
+               |				|Details input ==>(email(from registration table), phoneNo(from registration table)).
+	       |				|Wallet Payment(on cancel payment money return to wallet/ or reschedule ).
+	       |				|
+	       v_________>3)Coach bus reservation (available only to authorized customers only): 
+	       |				|Customer must register through sign-up page and has to login through login page before making any reservation.
+	       |				|Extra security money.
+	       |				|
+	       v_________>4)Unauthorized customer cancellation: Cancel their reservation by entering their **email address** on which they had booked their tickets along with **transaction ID**
+	       |				|Refund credited to a) reschedule within one year ---  OR --- b) register and add the return money to wallet.
+	       |				|
+	       v_________>5)Authorized customer cancellation: Cancel his journey by Clicking on sub-menu Cancel Reservation of My Transaction tab.
+	       |				|Refund credited-- to wallet.
+	       |				|
+	       v_________>6)Feedback: Customer can give us feedback.	
+	       |				|
+	       v_________>7)Coach bus reservation: Customer can also opt for with or without driver
+						|For without driver, customer will submit extra security deposit for security purpose.
+						|With driver, normal charges.
+
+
+
+
+
+
+NOTE: '*' means the field is linked to a file with equal number of '*'.
+
+
+>>>>>> HOME PAGE (for all users)
+	>Search a bus.(src, dest, fromDate, toDate, fromTiming, toTiming) <-- search bus button*
+	>Login/Register(fName, lName, Email, password, confirmPass, contactNo.)
+		>signup/cancel.(button)
+		>login link--for logging in (login via email, pass)
+
+		> Forgot password.
+			> Email (input).
+			> Submit(button)/ cancel button(button).
+			> onSubmit (event)
+				> reset password link to user only if it is registered email.(newpass, confrimNewPass, update button)
+
+
+	> After click (search bus button functionality)* 
+		>Availibility (text info)
+		>Bus Arrival (text info)
+		>Bus departure. (text info)
+		>Fare. (text info)
+		>Dist. (text info)
+		>Confirm Page  <---- confirm button
+			> select seat (layout--booked,un-booked).
+			> book button**.
+				
+	>After click book button (Payment Page)**
+		>payment page(diff methods-- external wallet(UPI, paytm), internal wallet).
+			
+
+				
+>>>>>> DASH BOARD ( Only for Authorized User)
+
+	> Bookings
+		> LINKS--curr booking, past booking, cancelled booking, E-ticket, 
+		> FUNCTIONs on Eticket-- printticket, cancel ticket(OnClick)***, reschedule.
+	> Profile.
+		> Input-- Name, DOB, Gender, Mobile, email, address.
+		> Admin Profile: Only single user admin with login-username: "admin" && login-password: "admin@123".
+	> Change password.
+		> current password(input), new passsword(input), update(button).
+	> Wallet.
+
+	>After click cancel ticket button***
+		> calculate refund
+		> input date
+		> confim cancel(or OK button).
+		> escape option.
+
+
+
+
+
+
+
+
+IMPORTATNT MODULES >>
+1) ***.Coach bus reservation.*** ==> Customer can also opt for with or without driver > For without driver, customer will submit extra security deposit for security purpose.
+2) ***.Cancelation of few reserved seats from multiple seats.***
+
+
+
+
+
+		
+
+
+
+
+
+

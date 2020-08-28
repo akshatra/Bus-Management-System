@@ -1,0 +1,97 @@
+.header{
+    overflow: hidden;
+     background-color: #333;
+     color: white;
+}
+.header h1{
+    float: left;
+}
+.header button{
+    float: right;
+    padding: 1%;
+    font-size : 20px;
+    margin-top: 2%;
+    width: 20%;
+    margin-right: 2%;
+}
+.user-functions button{
+    padding: 1%;
+    width: 20%;
+    font-size: 20px;
+    margin-left: 4%;
+}
+input:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+    padding: 1%;
+}
+#login-complete{
+    margin-top: 0.5%;
+}
+.dashboard-content{
+    text-align: center;
+    margin-bottom: 6%;
+}
+.booking-works{
+    overflow: hidden;
+    border-style: solid;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+.bookings{
+    float: left;
+   margin-left: 30%;
+   margin-bottom: 2%;
+}
+
+
+
+
+/*box content */
+form button{
+    padding: 13%;
+    margin-top: 1%;
+    margin-left: 450%;
+    margin-bottom: 14%;
+}
+form button:hover{
+   padding: 13%;
+   margin-top: 1%;
+   margin-left: 450%;
+   margin-bottom: 14%;
+   border-color: blue;
+}
+#box{
+   width:600px;
+   margin: auto;
+   
+   padding: 30px;   
+}
+ #box-content{
+   margin: 1%;
+   border-style: solid;
+   text-align: center;
+   font-size: 20px;
+}
+form{
+   margin-right: 90%;
+}
+input:focus{
+   border-color:dodgerBlue;
+      box-shadow:0 0 8px 0 dodgerBlue;
+      padding: 1%;
+}
+label{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   text-align: right;
+   width: 400px;
+   line-height: 26px;
+   margin-bottom: 10px;
+   margin-left: 25%;
+}
+select{
+    margin-left: 450%;
+}

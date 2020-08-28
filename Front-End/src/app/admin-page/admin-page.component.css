@@ -1,0 +1,34 @@
+.header button{
+    float: right;
+    padding: 1%;
+    font-size : 20px;
+    margin-top: 2%;
+    width: 20%;
+    margin-right: 2%;
+}
+.user-functions button{
+    padding: 1%;
+    width: 20%;
+    font-size: 20px;
+    margin-left: 4%;
+}
+input:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+    padding: 1%;
+}
+#login-complete{
+    margin-top: 0.5%;
+}
+.dashboard-content{
+    text-align: center;
+    margin-bottom: 6%;
+}
+.booking-works{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+

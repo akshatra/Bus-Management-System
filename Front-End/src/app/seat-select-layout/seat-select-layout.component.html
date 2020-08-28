@@ -1,0 +1,186 @@
+<body>
+  
+<table>
+  <th>CLICK HERE TO FIND UNAVAILABLE SEATS</th>
+  <tr *ngFor="let c of bookdedSeat">
+  <td>{{c}}</td>
+</table>
+<input type="submit" (click)=" findTickets()" value="Occupied Seats"><br><br>
+<h1 id="heading"><u>Please select a seat.</u></h1>
+<div style="margin-left: 40%;">
+  Seat Number for your booking<br><input type="text" name="seatNumber" [(ngModel)]="seatNumber"><br><br>
+  Email<br><input type="text" [(ngModel)]="email"><br><br>
+  Phone<br><input type="text" [(ngModel)]="phoneNo"><br><br>
+  
+</div>
+<div id="proceed-button">
+  <button routerLink="/">Cancel</button>
+  <button routerLink="/afterSeatSelect" (click)="makeReservation()" >Proceed</button>
+</div>
+
+	<!-- Heading-->
+	<!-- <h1 id="heading"><u>Please select a seat.</u></h1> -->
+
+<!-- Driver seat Section -->	
+<!-- <div id="driver-section">
+  <table id="driver-section-table">
+    <tr>
+      <td class="driver-rows">FRONT PART</td>
+      <td id="driver-handle" class="driver-rows"></td>
+    </tr>
+  </table>
+</div> -->
+<!-- Seat Select Section -->
+<!-- <div class="main-bus">  
+  <div id="seat-section">
+     <div class="bus">
+
+      	<ol class="cabin fuselage">
+        <li class="row row--1">
+          <ol class="seats" type="A">
+            <li class="seat">
+              <input type="checkbox" id="1A" disabled/>
+              <label for="1A">1A</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="1B" />
+              <label for="1B">1B</label>
+            </li>
+            <div style="width: 140px"></div>
+            <li class="seat">
+              <input type="checkbox" id="1C" />
+              <label for="1C">1C</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="1D" />
+              <label for="1D">1D</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--2">
+          <ol class="seats" type="A">
+            <li class="seat">
+              <input type="checkbox" id="2A" />
+              <label for="2A">2A</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="2B" />
+              <label for="2B">2B</label>
+            </li>
+            <div style="width: 140px"></div>
+            <li class="seat">
+              <input type="checkbox" id="2E" />
+              <label for="2E">2E</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="2F" />
+              <label for="2F">2F</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--3">
+          <ol class="seats" type="A">
+            <li class="seat">
+              <input type="checkbox" id="3A" />
+              <label for="3A">3A</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="3B" />
+              <label for="3B">3B</label>
+            </li>
+            <div style="width: 140px"></div>
+            <li class="seat">
+              <input type="checkbox" id="3E" />
+              <label for="3E">3E</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="3F" />
+              <label for="3F">3F</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--4">
+          <ol class="seats" type="A">
+            <li class="seat">
+              <input type="checkbox" id="4A" />
+              <label for="4A">4A</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="4B" />
+              <label for="4B">4B</label>
+            </li>
+            <div style="width: 140px"></div>
+            <li class="seat">
+              <input type="checkbox" id="4E" disabled />
+              <label for="4E">4E</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="4F" />
+              <label for="4F">4F</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--5">
+          <ol class="seats" type="A">
+            <li class="seat">
+              <input type="checkbox" id="5A" />
+              <label for="5A">5A</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="5B" />
+              <label for="5B">5B</label>
+            </li>
+            <div style="width: 140px"></div>
+            <li class="seat">
+              <input type="checkbox" id="5E" />
+              <label for="5E">5E</label>
+            </li>
+            <li class="seat">
+              <input type="checkbox" id="5F" />
+              <label for="5F">5F</label>
+            </li>
+          </ol>
+        </li>
+    
+      </ol>
+      <div class="exit exit--back fuselage"></div>
+    </div>
+  </div>
+</div> -->
+
+
+	<!-- Ticket Display Section -->
+	<!-- <div class="ticket-section">
+		<h3 class="ticket-heading"><u>Select Seat</u></h3>
+		<div>
+			<table>
+        <tr>
+          <td><div style="width: 40px"></div></td>
+          <td><p></p></td>
+        </tr> 
+
+				<tr>
+					<td><div class="seat"><input type="checkbox"  checked /><label > .  </label></div></td>
+					<td><p>Seats selected.</p></td>
+				</tr>					
+				
+				<tr>
+					<td><div class="seat"><input type="checkbox" /><label > .  </label></div></td>
+					<td><p>Seats available</p><td>
+				</tr>
+
+				<tr>
+					<td>
+              <div class="seat" ><input type="checkbox" disabled /><label >disabledF</label></div>
+          </td>
+					<td><p>Seats occupied</p><td>
+				</tr>
+			</table>	
+		</div>
+  </div>
+  <br>
+  <div id="proceed-button">
+    <button routerLink="/">Cancel</button>
+    <button routerLink="/afterSeatSelect" (click)="makeReservation()" >Proceed</button>
+  </div> -->
+</body>

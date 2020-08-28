@@ -1,0 +1,43 @@
+a{ 
+    margin-left: 6%;
+}
+button{
+    margin-bottom: 2%;
+    padding: 2%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    margin-left: 2%;
+}
+#login-phase{
+    width:600px;
+    margin: auto;
+    margin-top:4.5%;
+    margin-bottom: 4.5%;
+    padding: 30px;
+}
+
+#log{
+    margin: 1%;
+   border-style: solid;
+   text-align: center;
+   font-size: 20px;
+}
+form{
+    margin-right: 90%;
+ }
+
+input:focus{
+    border-color:dodgerBlue;
+       box-shadow:0 0 8px 0 dodgerBlue;
+       padding: 1%;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;  
+    margin-left: 25%;
+    margin-top: 8px;
+}

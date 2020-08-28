@@ -1,0 +1,100 @@
+<!-- the content -->
+<main>
+
+    <!-- hero content -->
+    <div class="hero">
+        <!-- content for the hero -->
+        <div *ngIf="showf" class="hero-content">
+            <h1 class="hero-title">Choose Your Destination.</h1>
+            
+            <select id="srcs" class="custom-select" style="width: 210px;"  (change)="handleEvent($event)" [(ngModel)]=search.src>
+                <option>Select  source </option>
+                <option value="Pune">Pune</option>
+                <option value="Navi Mumbai">Navi Mumbai</option>
+                <option value="Dombivli">Dombivli</option>
+                <option value="Nashik">Nashik</option>
+            </select>
+            
+
+            <select id="dsts"  class="custom-select" style="width: 210px; margin-left: 5px;" (click)="handleClick()" placeholder="destination" [(ngModel)]=search.dest>
+                <option> Select destination  </option>
+                <option value="Pune" [disabled]="A">Pune</option>
+                <option value="Navi Mumbai" [disabled]="B">Navi Mumbai</option>
+                <option value="Dombivli" [disabled]="C">Dombivli</option>
+                <option value="Nashik" [disabled]="D">Nashik</option>
+            </select>
+
+            <br><br>
+            <!-- <label>From : </label><input type="date" class="custom-select" style="width: 210px;">
+            <label>From timing: </label><input class="custom-select" style="width: 210px;" type="time">
+            
+
+            <label>To : </label><input type="date" class="custom-select" style="width: 210px;" placeholder="To Timing">
+            <label>To timing: </label><input type="time" class="custom-select" style="width: 210px;" placeholder="To Timing"> -->
+
+            <table style="margin-left: 400px;"> 
+                <thead>
+                    <tr>
+                        <td>From</td>
+                        <td style="width: 30px;"></td>
+                        <td>To</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="date" class="custom-select" style="width: 210px;" [(ngModel)]=doj><br>
+                            <input class="custom-select" style="width: 210px;" type="time" [(ngModel)]=search.fromTime>
+                        </td>
+                        <td style="width: 30px;"></td>        
+                        <td>
+                            <input type="date" class="custom-select" style="width: 210px;" placeholder="To Timing" ><br>
+                            <input type="time" class="custom-select" style="width: 210px;" placeholder="To Timing"[(ngModel)]=search.toTime>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <button (click)="show()" style="padding: 20px;" >Search Bus</button>    
+        </div>
+    </div>
+
+    <div *ngIf="!showf" id="continue-login">	
+        <div id="continue">
+            <button style="padding-left: 6%; padding-right: 6%;" (click)="searchBus()">Authorized User</button><br>
+            <button (click)="searchBus1()">UnAuthorized User</button>	
+        </div>
+    </div>
+
+    <div *ngIf="checkUser">
+    <div id="search-bus">
+        <hr>
+        <table  cellpadding=10 cellspacing=30 style="width:100%; ">
+          <tr >
+          <th>Bus Name</th>   
+          <th>Source</th> 
+          <th>Destination</th> 
+          <th>Arrival Time</th> 
+          <th>Departure time</th> 
+          <th>Fare</th>
+          <th>Bus Type</th>
+          </tr>
+          <!--<tr *ngFor='let x of bus'>-->
+        <tr *ngFor="let c of searcha; let i=index">
+        <td>{{c.busName}}</td>
+        <td>{{c.source}}</td>
+        <td>{{c.destination}}</td>
+        <td>{{c.startTime}}</td>
+        <td>{{c.reachTime}}</td>
+        <td>{{c.fare}}</td>
+        <td>{{c.busType}}</td>
+        <td><button  routerLink="/seatLayoutLink" style="background-color: darkorange;" (click)="showFun(c)" >SELECT BUS</button></td>
+      </tr>
+      
+    </table>
+    <hr>
+    </div>
+    </div>
+</main>

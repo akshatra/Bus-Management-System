@@ -1,0 +1,15 @@
+button{
+    padding: 1.5%;
+    font-size: 15px;
+    margin-bottom: 1%;
+}
+ul{
+    list-style-type: none;
+}		
+#cancel-second{
+    font-size: 20px;
+    border-style: solid;
+    margin-top: 6.5%;
+    text-align: center;
+    margin-bottom: 6.5%;
+}

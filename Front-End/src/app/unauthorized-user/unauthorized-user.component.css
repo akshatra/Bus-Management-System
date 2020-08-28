@@ -1,0 +1,33 @@
+#for-unauthorized{
+    width:600px;
+    margin: auto;
+    margin-top:5%;
+    margin-bottom: 5%;
+    padding: 30px;
+}
+#unauthorized{
+    margin: 1%;
+   border-style: solid;
+   text-align: center;
+   font-size: 20px;
+}
+
+input:focus{
+    border-color:dodgerBlue;
+       box-shadow:0 0 8px 0 dodgerBlue;
+       padding: 1%;
+}
+button{
+    padding:2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;  
+    margin-top: 8px;
+}

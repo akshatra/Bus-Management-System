@@ -1,0 +1,55 @@
+<div class="container-sm">
+	<h2>Enter Details to search your booked ticket</h2><br>
+
+		<form [formGroup]="SearchTicketForm" (ngSubmit)="f.form.valid" #f="ngForm">
+      <div class="form-group">
+
+      <!-- Ticket Id-->
+      <div>
+        <label>Ticket Id </label> 
+        <input type="text" name="" [(ngModel)]=search.ticketNo formControlName="ticketId"  class="form-control" placeholder="Enter Ticket Id" [class.is-invalid]="TicketId.invalid && TicketId.touched">
+
+        <div *ngIf="TicketId.invalid && TicketId.touched">
+          <small class="text-danger">TicketId not valid.</small>
+        </div> 
+			</div>
+      
+          <br>
+      <!-- OnSubmit button -->
+      <div class="form-group" style="text-align:center">
+        <button class="btn btn-primary" (click)="searchTicket()">Search Details</button>
+      </div>
+
+      </div>
+    </form>
+    
+  <div *ngIf="show">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Ticket Id</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Arrival Time</th>
+        <th>Departure Time</th>
+        <th>Bus Number</th>
+        <th>Seat Number</th>
+        <th>Date of Journey</th>
+      </tr>  
+    </thead>
+   <!-- *ngFor="let c of searcha"   *ngFor="let c of searchb"-->
+    <tbody>
+      <tr >
+        <td>{{searchb.ticketNo}}</td>
+        <td>{{searchb.source}}</td>
+        <td>{{searchb.destination}}</td>
+        <td>{{searchb.startTime}}</td>
+        <td>{{searchb.reachTime}}</td>
+        <td>{{searchb.busNo}}</td>
+        <td>{{searchb.seatNo}}</td>
+        <td>{{searchb.dateOfJourney}}</td>
+      </tr>
+    <tbody>
+  </table>
+</div>
+</div>

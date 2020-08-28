@@ -1,0 +1,41 @@
+<html>
+  <body>
+
+  
+<header>
+
+  <!-- our main logo -->
+  <a id="logo" href="index.html">
+      <img src="assets/main_logo.PNG" alt="Logo">
+      <span>Travelling Idyllic</span>
+  </a>
+
+  <!-- main navigation links -->
+  <nav>
+      <ul>
+          <li><a routerLink="/registerLink">Register</a></li>
+          <li><a routerLink="/loginLink">Login</a></li>
+          <li><a routerLink="/bookedTicketLink">Search Ticket</a></li>
+          <li><a routerLink="/cancelLink">Cancel Ticket</a></li>
+          <li><a routerLink="/aboutPageLink">About</a></li>
+          <li><a href="#myLink">Contact Us</a></li>
+       </ul>
+  </nav>
+
+</header>
+
+<router-outlet></router-outlet>
+
+<footer id="myLink">
+  <img src="assets/main_logo.PNG" alt="Footer Logo">
+  <span>Idyllic Travels<br>Copyright &copy; 2020-2030 </span>
+
+  <div id="details">   
+          <p> Travelling Idyllic.</p>
+          <p> Customer Care: +91-8209040155 </p>
+          <p> 102, Ground Floor, S.G. Palya, Bengaluru, Karnataka 560029</p>
+  </div>
+</footer>
+
+</body>
+</html>

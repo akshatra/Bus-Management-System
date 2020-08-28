@@ -1,0 +1,69 @@
+<div id="login-complete">
+	<div class="header">
+		<h1>Bus Reservation System</h1>
+		<button type="submit" routerLink="/">Logout</button>
+	</div>
+	<hr>
+	<div class="nav">
+		<h2>{{emailId}}</h2>
+	</div>
+	<hr>
+	<h2>My DashBoard</h2>
+	<div class="user-functions">
+		<button (click)='bookingDetails()'>Bookings</button>
+		<button type="submit" (click)='userDetails()'>Profile</button>
+		<button type="submit" (click)='showc()'>Change Password</button>
+		<button type="submit" (click)='wallet()'>Wallet</button>
+	</div>
+	<div class="dashboard-content">
+		<div class="">
+			<p id="demo"></p>
+			<div *ngIf='first' class="booking-works">
+				<h2>Bookings</h2>
+				<div class="bookings" *ngFor="let c of details">
+					<span>{{c[0]}}->    </span>
+					<span>{{c[1]}}            </span>
+					<span>{{c[2]}}    </span>
+					<br><br>
+				</div>	
+			</div>
+			<div *ngIf='second'>
+				<div id="box">
+					<div id="box-content">
+					<h4>User Profile</h4><br>
+					<h4>Email:- <span>{{email}}</span></h4>
+					<h4>FirstName:- <span>{{firstName}}</span></h4>
+					<h4>LastName:- <span>{{lastName}}</span></h4>
+					<h4>Phone Number:- <span>{{phone}}</span></h4>
+				</div>
+				</div>
+				
+			</div>
+			<div *ngIf='third'>
+				<div id="box">
+					<div id="box-content">
+					<h2>Set New Password</h2>
+					<form (ngSubmit)="updatePass()">
+						Old Password <input type="password" [(ngModel)]="newObj1.oldPassword" name="old">
+						New Password<input type="password" [(ngModel)]="newObj1.newPassword" name="new">
+						<button type="submit">update password</button>
+					</form>
+					<h2 style="color: red;">{{message}}</h2>
+				</div>
+				</div>
+
+				
+			</div>
+			<div *ngIf='fourth'>
+				<div id="box">
+					<div id="box-content">
+						<h4>current balance: <span>{{amount}}</span> </h4>
+				</div>
+				</div>		
+			</div>
+			<div *ngIf='fifth'>
+				<p>Check Out your Dashboard</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+#ticket-details{
+    width:600px;
+    margin: auto;
+    margin-top:1%;
+    margin-bottom: 1%;
+    padding: 30px;
+}
+#details{
+    margin: 1%;
+   border-style: solid;
+   text-align: center;
+   font-size: 20px;
+}
+h2{
+    background-color: rgb(53, 52, 52);
+    color: white;
+}

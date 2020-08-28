@@ -1,0 +1,37 @@
+/* button{
+    padding: 1%;
+    margin-top: 1%;
+    font-size: 15px;
+    margin-bottom: 2%;
+}
+#cancel-ticket{
+   width:600px;
+   margin: auto;
+   margin-top:4.5%;
+   margin-bottom: 4.5%;
+   padding: 30px;
+}
+#cancel{
+    margin: 1%;
+   border-style: solid;
+   text-align: center;
+   font-size: 20px;
+}
+input:focus{
+    border-color:dodgerBlue;
+       box-shadow:0 0 8px 0 dodgerBlue;
+       padding: 1%;
+}
+a{
+    border-style: solid;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 6px;
+    margin-left: 2%;
+} */
